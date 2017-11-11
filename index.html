@@ -1,0 +1,48 @@
+<html>
+<head>
+Warehouse Extreme!
+</head>
+
+<body>
+<form>
+Username: <input type="text" name="username"><br>
+Password: <input type="text" name="password"><br>
+<input type="submit" value="Log In">
+</form>
+<script>
+//w3 schools
+
+var username = document.getElementById("username");
+var password = document.getElementById("password");
+
+username = "'" + username "'";
+password = "'" + password "'";
+
+var mysql = require('mysql');
+
+var con = mysql.createConnection({
+  host: "localhost",
+  user: "yourusername",
+  password: "yourpassword",
+  database: "mydb"
+});
+
+con.connect(function(err) {
+  if (err) throw err;
+  console.log("Connected!");
+  var sql = "SELECT * FROM user WHERE username =" + mysql.escape(username) + " AND password=" + mysql.escape(password);
+  //mysql.escape protects vs sql injection attacks
+  con.query(sql, function (err, result) {
+    if (err) 
+		throw err;
+	if (result != null)
+	{
+	//need to be able to grab what type of employee and throw them to the correct page
+    console.log("Log in succsessful");
+	}
+  });
+})
+
+</script>
+</body>
+</html>
