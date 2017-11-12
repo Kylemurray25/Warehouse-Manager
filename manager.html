@@ -1,14 +1,22 @@
 <html>
 <head>
-Welcome Manager!
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+<h1> <center> Welcome Manager!</center></h1>
 </head>
 
 <body>
-<button onClick="orderRequestController()">Order Requests</buttone>
-<button onClick="viewInventoryController()">View Inventory</buttone>
-<button onClick="placeOrderController()">Place Order</buttone>
-<button onClick="createReportController()">Create Report</buttone>
-
+<div class="row">
+<button class ="btn sm ghost" onClick="orderRequestController()">Order Requests</buttone>
+</div>
+<div class="row">
+<button class ="btn sm ghost" onClick="viewInventoryController()">View Inventory</buttone>
+</div>
+<div class="row">
+<button class ="btn sm ghost" onClick="placeOrderController()">Place Order</buttone>
+</div>
+<div class="row">
+<button class ="btn sm ghost" onClick="createReportController()">Create Report</buttone>
+</div>
 <script>
 function orderRequestController()
 {

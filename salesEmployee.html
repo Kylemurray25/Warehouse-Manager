@@ -1,12 +1,16 @@
 <html>
 <head>
-Welcome Sales Employee!
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+<h1><center>Welcome Sales Employee!</h1></center>
 </head>
 
 <body>
-<button onClick="placeOrderController()">Place Order Request</buttone>
-<button onClick="viewInventoryController()">Create Report</buttone>
-
+<div class="row">
+<button class ="btn sm ghost" onClick="placeOrderController()">Place Order Request</buttone>
+</div>
+<div class="row">
+<button class ="btn sm ghost" onClick="viewInventoryController()">Create Report</buttone>
+</div>
 <script>
 function placeOrderController()
 {
