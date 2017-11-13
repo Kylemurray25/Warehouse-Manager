@@ -1,10 +1,14 @@
-
-body 
-{
-background-color: gray;
+body{
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#999999+0,9c9c9c+17,7f7f7f+27,7f7f7f+27,7f7f7f+35,686868+39,686868+39,383838+51,383838+58,111111+66,636363+87,686868+94 */
+background: rgb(153,153,153); /* Old browsers */
+background: -moz-linear-gradient(-45deg, rgba(153,153,153,1) 0%, rgba(156,156,156,1) 17%, rgba(127,127,127,1) 27%, rgba(127,127,127,1) 27%, rgba(127,127,127,1) 35%, rgba(104,104,104,1) 39%, rgba(104,104,104,1) 39%, rgba(56,56,56,1) 51%, rgba(56,56,56,1) 58%, rgba(17,17,17,1) 66%, rgba(99,99,99,1) 87%, rgba(104,104,104,1) 94%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg, rgba(153,153,153,1) 0%,rgba(156,156,156,1) 17%,rgba(127,127,127,1) 27%,rgba(127,127,127,1) 27%,rgba(127,127,127,1) 35%,rgba(104,104,104,1) 39%,rgba(104,104,104,1) 39%,rgba(56,56,56,1) 51%,rgba(56,56,56,1) 58%,rgba(17,17,17,1) 66%,rgba(99,99,99,1) 87%,rgba(104,104,104,1) 94%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg, rgba(153,153,153,1) 0%,rgba(156,156,156,1) 17%,rgba(127,127,127,1) 27%,rgba(127,127,127,1) 27%,rgba(127,127,127,1) 35%,rgba(104,104,104,1) 39%,rgba(104,104,104,1) 39%,rgba(56,56,56,1) 51%,rgba(56,56,56,1) 58%,rgba(17,17,17,1) 66%,rgba(99,99,99,1) 87%,rgba(104,104,104,1) 94%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#999999', endColorstr='#686868',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
+/*impact header font*/
 h1, h4 {
-  color: $primary;
+  color:#70b2ff;
   font-weight: 300;
 }
 
@@ -22,9 +26,25 @@ hr {
 }
 
 .btn {
+  color: black;
+  border-color: #3CB371;
   display: inline-block;
   border-radius: 2px;
   border: none;
+  height: 45px;
+  padding: 0;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  transition: all 0.5s ease;
+}
+
+.btn:hover{
+  display: inline-block;
+  background: #3CB371;
+  color: black;
+  border-color: #3CB371;
+  border-radius: 3px;
+  
   height: 45px;
   padding: 0;
   margin-top: 5px;
@@ -45,7 +65,7 @@ hr {
 
 .cta {
   background-color: $primary;
-  color: white;
+  color: black;
   
   transition: .2s ease;
   
@@ -61,7 +81,7 @@ hr {
 .ghost {
 $primary: #ffa500;
 $secondary: #496ba0;
-  background-color: transparent;
+  background-color: orange;
   color: $primary;
   border: 1px solid $primary;
   
