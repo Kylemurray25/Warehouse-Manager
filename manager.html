@@ -17,7 +17,19 @@
 <div class="row">
 <button class ="btn sm ghost" onClick="createReportController()">Create Report</buttone>
 </div>
+
+<div class="popup" onclick="myFunction()">Click me!
+  <span class="popuptext" id="myPopup">Popup text...</span>
+</div>
+
+
+
 <script>
+function myFunction() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
+}
+
 function orderRequestController()
 {
 //view table of order requests sent from warehouse worker. 
