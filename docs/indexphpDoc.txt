@@ -1,0 +1,9 @@
+File Documentation:
+index.php
+
+Purpose of class: redirects to login.php if there is no login. If logged in, redirects
+to appropriate admin page.
+
+Data properties: N/A
+
+Methods: N/A

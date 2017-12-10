@@ -1,0 +1,77 @@
+File Documentation:
+server.php
+
+Purpose of class: 
+Manage the methods for every other class and regulate interactions with the database.
+
+Data properties:
+query- different variables part of database queries. They include:
+	orderRequestNo
+	itemNo
+	item
+	desc
+	cost
+	price
+	quantity
+	username
+	password
+
+Methods:
+	general methods:
+	login_user-
+		pre-conditions- must have username and password.
+		post-conditions- either both are invalid credentials, username is valid
+				and password is invalid, or correct credentials and user
+				logs in.
+
+
+	manager methods:
+	process_request-
+		pre-conditions- warehouse employee must place an order for a shipment.
+		post-conditions- the shipment gets added to inventory stock.
+
+	decline_request-
+		pre-conditions- warehouse employee must place an order for a shipment.
+		post-conditions- the request gets deleted and nothing gets added to stock.
+	
+	place_order-
+		pre-conditions- must have information necessary about item name and quantity.
+		post-conditions- request gets sent to warehouse employee, where they must
+				confirm shipment.
+
+	new_item- 
+		pre-conditions- manger must have info for new item.
+		post-conditions- new item gets added to item list.
+
+
+	warehouse employee:
+	place_order_request-
+		pre-conditions- must have information necessary about item name and quantity.
+		post-conditions- request gets sent to manager, where they must
+				confirm purchase.
+
+	process_placeorder_request-
+		pre-conditions- sales employee must place an order for a shipment.
+		post-conditions- the shipment gets deducted from inventory stock.
+	
+	decline_placeorder_request-
+		pre-conditions- sales employee must place an order for a shipment.
+		post-conditions- the request gets deleted and nothing gets sold.
+
+	process_shipment_request-
+		pre-conditions- manager places an order, and shipment must get recieved.
+		post-conditions- shipment confirmed as recieved, the shipment gets 
+				added to inventory stock.
+	
+	decline_shipment_request-
+		pre-conditions- manager places and order, and shipment not recieved.
+		post-conditions- shipment not recieved, order declined, inventory
+				not updated. 
+	
+
+
+	sales employee:
+	place_purchase_request-
+		pre-conditions- must have information necessary about item name and quantity.
+		post-conditions- request gets sent to manager, where they must
+				confirm sale.

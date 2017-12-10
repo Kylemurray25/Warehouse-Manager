@@ -1,0 +1,36 @@
+File Documentation:
+manager.php
+
+Purpose of class: 
+Displays the actions the manager is able to do on the webpage.
+
+Data properties:
+links- to our css
+
+labels- for the input fields
+
+textfields- for field input
+
+buttons- 
+	order requests- views the current placed orders by the sales employee, and allows manager to confirm or decline them all
+	
+	view inventory- displays all the items currently in warehouse stock, along with their name, quantity, description, cost, and sell price.
+	
+	place order- allows user to choose type of item and quantity through dropbox and textfield, pressing confirm sends the data to be stored in the database. Since this is the manager version, it gets uploaded directly without need for review.
+	
+	create report- shows the current stats for the warehouse
+
+	new item- allows manager to create a new type of item to be able to order.
+
+Methods:
+server.php handles the button methods
+
+UI methods that control the buttons and modal behaviors.
+
+connect- connects to the database in order to let the user manipulate it.
+	pre-condition- have the correct credentials and validate
+	post-condition- allow access to the user through the designated actions
+
+logout- logs the user out.
+	pre-condition- must be logged in as a user.
+	post-condition- user is logged out of the system and brought back to login page.

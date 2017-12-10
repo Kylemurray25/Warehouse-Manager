@@ -1,0 +1,16 @@
+File Documentation:
+login.php
+
+Purpose of class: 
+Allow the user to log into the warehouse system by signing in with their username and password.
+
+Data properties:
+links- to our css
+labels- for the username and password fields
+textfields- for username and password input
+buttons- login button to submit credentials
+
+Methods:
+post- secures password and username from being in the url and sends the information to the database to check if exists.
+	pre-condition- have the correct credentials and validate
+	post-condition- send user to correct page based on their role in the system

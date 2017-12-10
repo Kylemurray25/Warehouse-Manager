@@ -1,0 +1,34 @@
+File Documentation:
+warehouseEmployee.php
+
+Purpose of class: 
+Displays the actions the warehouse employee is able to do on the webpage.
+
+Data properties:
+links- to our css
+
+labels- for input fields
+
+textfields- for field input
+
+buttons- 	
+	purchase orders- confirm or deny what the sales employee wants to sell.
+
+	shipments- confrim or deny if the shipment order the manager placed has arrived.
+
+	place order- allows user to choose type of item and quantity through dropbox and textfield, pressing confirm sends the data to be stored in the database. Since this is the manager version, it gets uploaded directly without need for review.
+
+	view inventory- displays all the items currently in warehouse stock, along with their name, quantity, description, cost, and sell price.
+
+Methods:
+server.php handles the button methods
+
+UI methods that control the buttons and modal behaviors.
+
+connect- connects to the database in order to let the user manipulate it.
+	pre-condition- have the correct credentials and validate
+	post-condition- allow access to the user through the designated actions
+
+logout- logs the user out.
+	pre-condition- must be logged in as a user.
+	post-condition- user is logged out of the system and brought back to login page.
